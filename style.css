@@ -1,23 +1,42 @@
+/* Heading (H1, Titles): Tiro Devanagari Sanskrit – A traditional Devanagari-inspired serif.
+
+Subheading (H2, H3): Manjari – A Malayalam-rooted sans-serif that’s sleek and minimal.
+
+Body Text: Hind – A simple, readable sans-serif optimized for UI design. */
+
+
+/* Vibe: Classy, traditional, minimalist
+
+Gold (#D4AF37) – Inspired by the golden zari of Kasavu sarees
+
+Ivory (#F5F5DC) – Base background for a soft, elegant feel
+
+Deep Green (#1B5E20) – Symbolic of nature and Kerala’s lush greenery
+
+Charcoal Black (#212121) – For strong accents and contrast */
+
 /* General Styles */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Hind', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0a0a0a;
-    color: #ffffff;
+    background-color: #F5F5DC; /* Ivory */
+    color: #212121; /* Charcoal Black */
     text-align: center;
 }
 
 /* Header */
 header {
-    background-color: #111;
+    background-color: #1B5E20;
     padding: 1rem 0;
 }
 
 h1 {
+    font-family: 'Tiro Devanagari Sanskrit', serif;
     margin: 0;
     font-size: 2.5rem;
     font-weight: 600;
+    color: #D4AF37;
 }
 
 nav ul {
@@ -33,14 +52,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffe81f; /* Subtle Star Wars yellow accent */
+    color: #D4AF37; /* Gold */
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffffff;
+    color: #F5F5DC; /* Ivory */
 }
 
 /* Sections */
@@ -50,18 +69,23 @@ main {
 
 section {
     margin-bottom: 3rem;
+    background: #FFF; /* White background for sections */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
+    font-family: 'Manjari', sans-serif;
     font-size: 2rem;
-    color: #ffe81f;
+    color: #D4AF37; /* Gold */
     margin-bottom: 1rem;
 }
 
 /* Footer */
 footer {
-    background-color: #111;
+    background-color: #1B5E20; /* Deep Green */
     padding: 1rem 0;
     font-size: 0.9rem;
-    color: #888;
+    color: #D4AF37; /* Gold */
 }
