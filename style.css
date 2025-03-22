@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #111;
+    padding: 1rem 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ffe81f; /* Subtle Star Wars yellow accent */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* Sections */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffe81f;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #888;
+}
