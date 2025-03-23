@@ -26,9 +26,16 @@ Charcoal Black (#212121) – For strong accents and contrast */
 body {
     font-family: 'Hind', sans-serif;
     background-color: #F5F5DC; /* Ivory */
-    color: #212121; /* Charcoal Black */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    color: #212121;
+    overflow-x: hidden;
+    background-image: url("flower.png"), url("flower.png"); /* Two images */
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, right top; /* Bottom center & top right */
+    background-size: 300px auto, 350px auto; /* Adjust sizes */
+    padding-bottom: 120px; /* Ensure space for the bottom flower */
 }
+
+
 
 /* Navbar (Transparent at Start) */
 header {
