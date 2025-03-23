@@ -15,35 +15,39 @@ Deep Green (#1B5E20) – Symbolic of nature and Kerala’s lush greenery
 
 Charcoal Black (#212121) – For strong accents and contrast */
 
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* General Styles */
 body {
     font-family: 'Hind', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #F5F5DC; /* Ivory */
     color: #212121; /* Charcoal Black */
-    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-
-/* Header */
+/* Navbar (Fixed Top) */
 header {
-    background-color: #1B5E20;
-    padding: 1rem 0;
-}
-
-h1 {
-    font-family: 'Tiro Devanagari Sanskrit', serif;
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #D4AF37;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: none;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
@@ -52,40 +56,85 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #D4AF37; /* Gold */
+    color: #000000; /* Gold */
     text-decoration: none;
     font-weight: 600;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #F5F5DC; /* Ivory */
+    color: #1B5E20; 
 }
 
-/* Sections */
-main {
-    padding: 2rem;
+/* Main Layout */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;     
 }
 
-section {
-    margin-bottom: 3rem;
-    background: #FFF; /* White background for sections */
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-family: 'Manjari', sans-serif;
-    font-size: 2rem;
-    color: #D4AF37; /* Gold */
-    margin-bottom: 1rem;
-}
-
-/* Footer */
-footer {
+/* Left Section */
+.left {
+    width: 50%;
     background-color: #1B5E20; /* Deep Green */
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    color: #D4AF37; /* Gold */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.left h1 {
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff; /* Gold */
+    line-height: 1.2;
+}
+
+/* Right Section */
+.right {
+    width: 50%;
+    background-color: #FFF;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.right img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* Floating Social Icons (Fixed on the Right) */
+.social-icons {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 0.7;
+}
+
+/* Scrollable Content Below */
+.content {
+    text-align: center;
+    padding: 3rem 2rem;
 }
