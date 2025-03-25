@@ -15,29 +15,35 @@ Deep Green (#1B5E20) – Symbolic of nature and Kerala’s lush greenery
 
 Charcoal Black (#212121) – For strong accents and contrast */
 
-/* Reset */
+/* ============================= */
+/* GLOBAL RESET & GENERAL STYLES */
+/* ============================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General Styles */
-body {
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     font-family: 'Hind', sans-serif;
     background-color: #F5F5DC; /* Ivory */
     color: #212121;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scroll */
     background-image: url("flower.png"), url("flower.png"); /* Two images */
     background-repeat: no-repeat, no-repeat;
-    background-position: left bottom, right top; /* Bottom center & top right */
+    background-position: left bottom 10px, right top; /* Bottom left & top right */
     background-size: 300px auto, 350px auto; /* Adjust sizes */
-    padding-bottom: 120px; /* Ensure space for the bottom flower */
+    padding-bottom: 20px; /* Space for bottom flower */
 }
 
+/* ============================= */
+/* NAVIGATION BAR */
+/* ============================= */
 
-
-/* Navbar (Transparent at Start) */
 header {
     position: fixed;
     top: 0;
@@ -52,8 +58,8 @@ header {
 
 /* Navbar when scrolled */
 header.scrolled {
-    background: rgba(255, 255, 255, 1); /* Fully white */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Navbar Links */
@@ -61,10 +67,6 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-}
-
-nav ul li {
-    display: inline;
 }
 
 nav ul li a {
@@ -75,41 +77,80 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-/* When Navbar is NOT Scrolled (Transparent State) */
+/* Navbar in Transparent State */
 header:not(.scrolled) nav ul li a {
-    color: #1B5E20; /* White text when background is transparent */
+    color: #1B5E20;
 }
 
 header.scrolled nav ul li a:hover {
-    color: #1B5E20; /* Deep Green Hover Effect */
+    color: #1B5E20;
 }
 
-/* Main Layout */
+/* ============================= */
+/* MAIN LAYOUT & HERO SECTION */
+/* ============================= */
+
+main {
+    flex: 1; /* Pushes footer down */
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    margin: 100px auto 50px auto;
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Container */
 .container {
     display: flex;
     width: 100%;
     max-width: 1200px;
-    margin: 100px auto 50px auto; /* Adds space below for the introduction */
+    margin: 100px auto 50px auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 2s ease-out forwards;
 }
 
 /* Left Section */
 .left {
     width: 50%;
-    background-color: #1B5E20; /* Deep Green */
+    background-color: #1B5E20;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 50px;
 }
 
+/* Fix Tagline Below Name */
 .left h1 {
     font-family: 'Tiro Devanagari Sanskrit', serif;
     font-size: 3.5rem;
     font-weight: 700;
     color: #ffffff;
     line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #FFF;
+    text-align: center;
+    display: block; /* Ensures it is below the name */
 }
 
 /* Right Section */
@@ -126,10 +167,61 @@ header.scrolled nav ul li a:hover {
 .right img {
     max-width: 90%;
     height: auto;
-    margin-bottom: 10px; /* Space between images */
+    margin-bottom: 10px;
 }
 
-/* Floating Social Icons (Fixed on the Right) */
+/* ============================= */
+/* INTRODUCTION SECTION */
+/* ============================= */
+
+.introduction {
+    text-align: left;
+    padding: 3rem 2rem;
+    background-color: #FFF;
+    max-width: 1200px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.introduction h2 {
+    font-family: 'Hind', sans-serif;
+    font-size: 2rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.introduction p {
+    font-size: 1.2rem;
+    color: #212121;
+    line-height: 1.5;
+}
+
+/* ============================= */
+/* FOOTER - FIXED TO BOTTOM */
+/* ============================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1B5E20;
+    color: #FFF;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: auto; /* Pushes footer to bottom */
+}
+
+footer a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ============================= */
+/* SOCIAL ICONS */
+/* ============================= */
+
 .social-icons {
     position: fixed;
     right: 20px;
@@ -151,28 +243,81 @@ header.scrolled nav ul li a:hover {
     opacity: 0.7;
 }
 
-/* Introduction Section BELOW Main Container */
-.introduction {
-    text-align: left;
+.skills {
+    text-align: center;
     padding: 3rem 2rem;
     background-color: #FFF;
     max-width: 1200px;
-    margin: 50px auto; /* Ensures it stays below */
-    border-radius: 10px;
+    margin: 50px auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.introduction h2 {
+.skills h2 {
     font-family: 'Hind', sans-serif;
     font-size: 2rem;
     color: #D4AF37; /* Gold */
     margin-bottom: 1rem;
 }
 
-.introduction p {
-    font-size: 1.2rem;
-    color: #212121;
-    line-height: 1.5;
+/* Skills Grid */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
+/* Individual Skill */
+.skill {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.skill img {
+    width: 50px; /* Adjust icon size */
+    height: 50px;
+    transition: transform 0.2s ease;
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #212121;
+    margin-top: 10px;
+}
+
+/* Hover Effect */
+.skill:hover {
+    transform: scale(1.1);
+}
+
+/* Pop Animation */
+.pop {
+    transform: scale(1.2);
+    transition: transform 0.1s ease-in-out;
+}
+
+.resume {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #FFF;
+    max-width: 1200px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume h2 {
+    font-family: 'Manjari', sans-serif;
+    font-size: 2rem;
+    color: #D4AF37; /* Gold */
+    margin-bottom: 1.5rem;
+}
+
+.resume img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: 2px solid #D4AF37;
+    border-radius: 10px;
+}
 

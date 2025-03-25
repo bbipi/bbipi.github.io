@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-</head>
-<body>
-    <header> About Me</header>
-</body>
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Me | Bipasha Bipin</title>
+        <link rel="stylesheet" href="../style.css"> <!-- General Styles -->
+        <link rel="stylesheet" href="about-me.css"> <!-- About Me Page Specific Styles -->
+    </head>
+    
+    <body>
+
+        <!-- Navigation Bar -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">HOME.</a></li>
+                    <li><a href="projects.html">PROJECTS.</a></li>
+                    <li><a href="contact.html">CONTACT.</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <section class="about-container">
+            <!-- Profile + Description -->
+            <div class="about-top">
+              <div class="photo-box">
+                <img src="koi fish.png" alt="koi">
+              </div>
+              <div class="about-desc">
+                <h2>Hi, I'm Bipasha!</h2>
+                <p>
+                  I'm a fourth-year Computer Science student at the University of Georgia passionate about creating clean, functional, and human-centered designs. I specialize in UX/UI, full-stack development, and bringing sustainable tech ideas to life.
+                </p>
+              </div>
+            </div>
+          
+            <!-- Flippable Cards -->
+            <div class="card-row">
+              <!-- Skills Card -->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <h3>Skills</h3>
+                  </div>
+                  <div class="flip-card-back">
+                    <p><strong>TECHNICAL SKILLS</strong></p>
+                    <p>Programming/Scripting: JavaScript, SwiftUI, HTML, CSS, Python, Java</p>
+                    <p>Frameworks/Cloud: AWS (Textract, S3, Lambda), Azure (Form Recognizer, AI Studio), React, Next.js, Express.js, FastAPI</p>
+                    <p>DevOps & Tools: Git, Docker, Kubernetes, VS Code, Xcode, Jupyter</p>
+                    <p>Databases: MySQL, MongoDB, Firebase</p>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Education Card -->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <h3>Education</h3>
+                  </div>
+                  <div class="flip-card-back">
+                    <p><strong>EDUCATION</strong></p>
+                    <p>UGA – B.S. Computer Science | GPA: 3.7 | New Media Certificate</p>
+                    <p>Yonsei University – Exchange Program | GPA: 3.8</p>
+                    <p>Relevant Coursework: Theory of Deep Learning, Compiler Design</p>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Hobbies Card -->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <h3>Hobbies</h3>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>Snowboarding</p>
+                    <p>Karaoke</p>
+                    <p>Traveling</p>
+                    <p>Learning Languages</p>
+                    <p>Hip Hop Dancing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>     
+        
+    
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Bipasha Bipin | <a href="mailto:bb84832@uga.edu">Email Me</a></p>
+        </footer>
+    
+    </body>
+    </html>

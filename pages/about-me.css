@@ -1,0 +1,114 @@
+/* ============================= */
+/* ABOUT ME PAGE - CLEANED STYLES */
+/* ============================= */
+
+.about-container {
+    max-width: 1100px;
+    margin: 100px auto 50px auto;
+    padding: 3rem;
+    background-color: #FFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .about-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 3rem;
+  }
+  
+  .photo-box {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+  }
+  
+  .photo-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  .about-desc {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+  }
+  
+  .about-desc h2 {
+    font-size: 2rem;
+    color: #1B5E20;
+    margin-bottom: 1rem;
+  }
+  
+  .about-desc p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .card-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .flip-card {
+    background-color: transparent;
+    width: 32%;
+    height: 350px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5DC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flip-card-front {
+    font-size: 1.5rem;
+    color: #1B5E20;
+    font-weight: 600;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+    font-size: 0.9rem;
+    color: #212121;
+    line-height: 1.4;
+    text-align: left;
+    overflow-y: auto;
+  }
+  
+  .flip-card-back p {
+    margin-bottom: 0.6rem;
+  }
