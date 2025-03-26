@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">  
+    <link rel="stylesheet" href="projects.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <title>Projects</title>
 </head>
 <body>
-    <header>Projects</header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home.</a></li>
+                <li><a href="about-me.html">About Me.</a></li>
+                <li><a href="contact.html">Contact.</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="projects-page">
+        <section class="project-card">
+            <h2>sustAIn iOS SwiftUI App</h2>
+            <p>Developed sustAIn, an iOS app that scans product barcodes, retrieves ingredient data via OpenFoodFacts API, and uses generative AI to suggest sustainable alternatives. 
+            Integrated Firebase for user authentication and Core Data for local barcode history.</p>
+            <img src="sustain.png" alt="sustain">
+        </section>
+
+        <section class="project-card">
+            <h2>Cinema E Booking Website</h2>
+            <p> Built a web-based ticket booking website enabling users to browse movies, view showtimes, and reserve seats. 
+            Essentially everything a cinema booking system can perform, using Javascript, React, and MySQL.
+            Implemented user authentication, real-time seat selection, and payment integration for a seamless booking experience.</p>
+            <img src="ceb.jpg" alt="ceb">
+        </section>
+
+        <section class="project-card">
+            <h2>Garfield Humane Society for Cats</h2>
+            <p>Created an adoption webpage using JavaScript, HTML/CSS, and React. Utilized Figma and Canva to design a visually appealing and user-friendly layout. 
+            Applied Human-Computer Interaction (HCI) principles, focusing on color schemes, responsiveness, and scalability to enhance user experience. </p>
+            <img src="cats.jpeg" alt="cats">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bipasha Bipin. All rights reserved.</p>
+    </footer>
 </body>
 </html>

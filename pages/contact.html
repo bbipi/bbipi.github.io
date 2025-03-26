@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <link rel="stylesheet" href="../style.css">  
+    <link rel="stylesheet" href="contact.css"> 
 </head>
 <body>
-    <header>Contact Me</header>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME.</a></li>
+                <li><a href="about-me.html">ABOUT ME.</a></li>
+                <li><a href="projects.html">PROJECTS.</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <form action="mailto:bb84832@uga.edu" method="POST" enctype="text/plain">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+    
+            <button type="submit">Send</button>
+        </form>
+    
+        <div class="social-links">
+            <a href="https://www.instagram.com/bipasha_bipin/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/bipasha-bipin/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn Icon">
+            </a>
+        </div>
+    </div>
+    
 </body>
 </html>

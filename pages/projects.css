@@ -1,0 +1,34 @@
+.projects-page {
+    padding-top: 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #FFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 40px 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.project-card h2 {
+    font-family: 'Manjari', sans-serif;
+    color: #1B5E20;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #212121;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+}
